@@ -1,0 +1,74 @@
+/* styles/BackgroundScroll.css */
+
+/* Define color variables */
+:root {
+  --blue-bg-color: blue;
+  --red-bg-color: red;
+  --yellow-bg-color: yellow;
+}
+
+/* Container for scrolling */
+.scroll-container {
+  overflow-y: scroll;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  padding: 0;
+  position: relative; /* For positioning overlay */
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  z-index: 1; /* Overlay above content */
+}
+
+/* Specific color overlays */
+.blue-overlay {
+  background: var(--blue-bg-color);
+}
+
+.red-overlay {
+  background: var(--red-bg-color);
+}
+
+.yellow-overlay {
+  background: var(--yellow-bg-color);
+}
+
+/* Each section takes full page height */
+.box-section {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 2rem;
+  color: white;
+  border-bottom-left-radius: 45px; /* Rounded bottom-left corners */
+  border-bottom-right-radius: 45px; /* Rounded bottom-right corners */
+  overflow: hidden; /* Prevent overflow */
+  z-index: 2; /* Above overlay */
+}
+
+/* Background colors for each section */
+.blue-bg {
+  background-color: var(--blue-bg-color);
+}
+
+.red-bg {
+  background-color: var(--red-bg-color);
+}
+
+.yellow-bg {
+  background-color: var(--yellow-bg-color);
+  color: black;
+}
+
+/* General text styles */
+h1, p {
+  margin: 0;
+}
